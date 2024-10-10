@@ -1,0 +1,20 @@
+[package]
+name = "rust-mmr"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-primitives = "0.8.3"
+rand = "0.8.5"
+
+[dev-dependencies]
+alloy-primitives = { version = "0.8.3", features = ["serde"] }
+mmr-sp1-programs = { path = "sp1-programs" }
+num-format = "0.4.4"
+sp1-build = { git = "https://github.com/succinctlabs/sp1.git", branch = "dev", package = "sp1-build" }
+sp1-prover = { git = "https://github.com/succinctlabs/sp1.git", branch = "dev", package = "sp1-prover" }
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", branch = "dev", package = "sp1-sdk" }
+
+[[bench]]
+name = "sp1_merklize"
+harness = false

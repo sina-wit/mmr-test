@@ -1,0 +1,11 @@
+[package]
+name = "mmr-sp1-programs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-primitives = { version = "0.8.3", features = ["serde"] }
+rust-mmr = { path = "../" }
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+sp1-derive = { git = "https://github.com/succinctlabs/sp1.git", branch = "dev", package = "sp1-derive" }
+sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git", branch = "dev", package = "sp1-zkvm" }
